@@ -1,0 +1,367 @@
+/* Main Body CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    font-style: normal;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header CSS */
+
+
+
+header {
+    padding: 20px 0;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .3s linear;
+}
+
+header.fixed {
+    padding: 10px 0;
+    transition: all .3s linear;
+}
+
+header .header-wrapper {
+    max-width: 1120px;
+    padding: 0 15px;
+    margin: 0 auto;
+    float: none;
+}
+
+header .header-wrapper .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s linear;
+}
+
+header.fixed .header-wrapper .header-container {
+    transform: scale(0.9);
+    transition: all .3s linear;
+}
+
+header .header-wrapper .header-container .logo-container {
+    width: 25%;
+}
+
+header .header-wrapper .header-container .menu-container {
+    width: 60%;
+    margin-right: 30px;
+}
+
+header .header-wrapper .header-container .menu-container nav {
+    float: right;
+}
+
+header .header-wrapper .header-container .menu-container ul {
+    padding: 0;
+    list-style: none;
+    display: table;
+    text-align: center;
+}
+
+header .header-wrapper .header-container .menu-container ul li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 10px;
+    display: table-cell;
+    position: relative;
+}
+
+header .header-wrapper .header-container .menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: normal;
+}
+
+header .header-wrapper .header-container .menu-container ul li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header .header-wrapper .header-container .menu-container ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+header .header-wrapper .header-container .cta-container {
+    width: 15%;
+}
+
+header .header-wrapper .header-container a.cta_button {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    line-height: normal;
+    text-decoration: none;
+    transition: all .3s linear;
+    border-radius: 6px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    float: right;
+}
+
+header .header-wrapper .header-container a.cta_button:hover {
+    background: #ffffff;
+    transition: all .3s linear;
+    color: #000;
+    border: 2px solid #000;
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    header .header-wrapper .header-container .menu-container ul li a {
+        font-size: 16px;
+    }
+
+    header .header-wrapper .header-container .cta-container a.cta_button {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+}
+
+
+@media(max-width:767px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header .header-wrapper .header-container .menu-container ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.fixed .header-wrapper .header-container {
+        transform: scale(1);
+    }
+
+    header .header-wrapper .header-container .menu-container nav ul {
+        transform: translateX(400px);
+        transition: all .4s linear;
+        position: absolute;
+        height: 100vh;
+        margin-top: 50px;
+        padding: 0 30px;
+    }
+
+    body.mobile-open header .header-wrapper .header-container .menu-container nav ul {
+        transform: translateX(-128px);
+        background: #000;
+        transition: all .4s linear;
+    }
+
+    header .header-wrapper .header-container .menu-container .mobile-trigger {
+        padding: 20px;
+        padding-right: 0px;
+        cursor: pointer;
+    }
+
+    header .header-wrapper .header-container .menu-container .mobile-trigger i {
+        display: block;
+        width: 20px;
+        height: 1px;
+        position: relative;
+        background: #fff;
+        transition: all .3s linear;
+    }
+
+    body.mobile-open header .header-wrapper .header-container .menu-container .mobile-trigger i {
+        width: 0px;
+        height: 0px;
+    }
+
+    header .header-wrapper .header-container .menu-container .mobile-trigger i:after {
+        width: 25px;
+        height: 1px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        content: '';
+        top: -5px;
+        right: 0;
+        transition: all .3s linear;
+    }
+
+    body.mobile-open header .header-wrapper .header-container .menu-container .mobile-trigger i:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    header .header-wrapper .header-container .menu-container .mobile-trigger i:before {
+        width: 27px;
+        height: 1px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 5px;
+    }
+
+    body.mobile-open header .header-wrapper .header-container .menu-container .mobile-trigger i:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    header .header-wrapper .header-container a.cta_button {
+        padding: 6px 14px;
+        float: none;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    header .header-wrapper .header-container .menu-container ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    header .header-wrapper .header-container .logo-container {
+        width: auto;
+    }
+
+    header .header-wrapper .header-container .menu-container {
+        margin-right: 0;
+        width: auto;
+    }
+
+    header .header-wrapper .header-container .cta-container {
+        width: auto;
+        margin-top: 12px;
+        display: none;
+    }
+}
+
+/* More Used CSS */
+
+.wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    float: none;
+    padding: 0 15px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: normal;
+}
+
+p {
+    font-size: 20px;
+    line-height: normal;
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Banner Section */
+
+.wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    float: none;
+    padding: 0 15px;
+}
+
+.banner-section {
+    margin-top: 97px;
+    padding: 60px 0 0;
+}
+
+.banner-section .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.banner-section .content-container .left-container {
+    width: 100%;
+}
+
+.banner-section .content-container .right-container {
+    width: 100%;
+}
+
+.banner-section .content-container .heading-container {
+    margin-bottom: 12px;
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    .banner-section .content-container .right-container {
+        max-width: 300px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner-section {
+        margin-top: 77px;
+        padding: 40px 0 0;
+    }
+
+    .banner-section .content-container {
+        flex-direction: column;
+        gap:20px;
+    }
+}
