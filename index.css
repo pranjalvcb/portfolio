@@ -139,7 +139,7 @@ header .header-wrapper .header-container a.cta_button {
     display: inline-block;
     text-transform: uppercase;
     text-align: center;
-    float: right;
+    float:right;
 }
 
 header .header-wrapper .header-container a.cta_button:hover {
@@ -256,7 +256,18 @@ header .header-wrapper .header-container a.cta_button:hover {
     }
 
     header .header-wrapper .header-container .logo-container {
-        width: auto;
+        width: 100%;
+        max-width:120px;
+    }
+
+    header .header-wrapper .header-container .logo-container svg{
+        width:100%;
+        height:auto;
+    }
+
+    header .header-wrapper .header-container .logo-container a{
+        height:0;
+        display:inline-block;
     }
 
     header .header-wrapper .header-container .menu-container {
@@ -268,6 +279,10 @@ header .header-wrapper .header-container a.cta_button:hover {
         width: auto;
         margin-top: 12px;
         display: none;
+    }
+
+    header .header-wrapper .header-container .menu-container ul li a{
+        font-size:16px;
     }
 }
 
