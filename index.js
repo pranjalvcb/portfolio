@@ -65,3 +65,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // move elements on window resize
     window.addEventListener('resize', moveElements);
 });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Display the loader
+    const loader = document.querySelector(".loader");
+    loader.style.opacity = "1";
+
+    // Hide the loader after 2 seconds
+    setTimeout(function() {
+      loader.style.opacity = "0";
+    }, 2000); // 2000 milliseconds = 2 seconds
+  });
