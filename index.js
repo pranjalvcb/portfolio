@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Display the loader
     const loader = document.querySelector(".loader");
     loader.style.opacity = "1";
@@ -82,3 +82,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 1000); // 1000 milliseconds = 1 second (adjust this if needed)
     }, 2000); // 2000 milliseconds = 2 seconds
   });
+  
