@@ -67,19 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
     // Display the loader
     const loader = document.querySelector(".loader");
     loader.style.opacity = "1";
-  
+
     // Hide the loader after 2 seconds
     setTimeout(function() {
       loader.style.opacity = "0";
-  
-      // Remove the "loader" class after the opacity transition completes
-      setTimeout(function() {
-        loader.classList.remove("loader");
-      }, 1000); // 1000 milliseconds = 1 second (adjust this if needed)
+      loader.style.zIndex = "-1";
     }, 2000); // 2000 milliseconds = 2 seconds
   });
-  
