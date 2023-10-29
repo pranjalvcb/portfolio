@@ -9,8 +9,20 @@
     <meta name="keywords" content="Software Developer">
     <meta name="author" content="Pranjal Singhal">
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Portfolio</title>
 </head>
 
@@ -22,7 +34,7 @@
             <div class="header-wrapper">
                 <div class="header-container">
                     <div class="logo-container">
-                        <a aria-label="Portfolio logo" href="#">
+                        <a aria-label="Portfolio logo" href="/">
                             <svg width="160" height="50" viewBox="0 0 370.22222222222223 94.18626205899047"
                                 class="css-1j8o68f">
                                 <defs id="SvgjsDefs3146"></defs>
@@ -62,7 +74,7 @@
                         <nav class="custom-menu-primary">
                             <ul>
                                 <li><a aria-label="Menu Items" href="#">About</a></li>
-                                <li><a aria-label="Menu Items" href="#">Education</a></li>
+                                <li><a aria-label="Menu Items" href="#education">Education</a></li>
                                 <li><a aria-label="Menu Items" href="#">Skills</a></li>
                                 <li><a aria-label="Menu Items" href="#">Projects</a></li>
                             </ul>
@@ -83,15 +95,18 @@
         <div class="wrapper">
             <div class="content-container">
                 <div class="left-container">
-                    <div class="heading-container">
+                    <div class="heading-container" data-aos="fade-right" data-aos-delay="100">
                         <h1>Pranjal Singhal</h1>
                     </div>
-                    <div class="description-container">
-                        <p>I am a dedicated Front-End Developer with expertise in HTML, CSS, andJavaScript. Passionate about creating visually appealing and user-friendlywebsites, I thrive in fast-paced environments. With a strong eye for detail anda commitment to excellence, I am driven to deliver exceptional results thatelevate the user experience.</p>
+                    <div class="description-container" data-aos="fade-right" data-aos-delay="300">
+                        <p>I am a dedicated Front-End Developer with expertise in HTML, CSS, andJavaScript. Passionate
+                            about creating visually appealing and user-friendlywebsites, I thrive in fast-paced
+                            environments. With a strong eye for detail anda commitment to excellence, I am driven to
+                            deliver exceptional results thatelevate the user experience.</p>
                     </div>
                 </div>
                 <div class="right-container">
-                    <div class="image-container">
+                    <div class="image-container" data-aos="flip-right" data-aos-delay="500">
                         <img src="Pranjal Singhal.png" alt="pranjal singhal" width="100%" height="auto">
                     </div>
                 </div>
@@ -99,18 +114,72 @@
         </div>
     </div>
 
-    <div class="education-section">
+    <div class="education-section" id="education">
         <div class="wrapper">
+            <div class="main-heading">
+                <h2>"Education"</h2>
+            </div>
             <div class="content-container">
-                <div class="left-container">
-
+                <div class="slider-nav">
+                    <div class="slide1">
+                        <h3>Intermediate</h3>
+                    </div>
+                    <div class="slide2">
+                        <h3>Graduate</h3>
+                    </div>
+                    <div class="slide3">
+                        <h3>Post Graduate</h3>
+                    </div>
                 </div>
-                <div class="right-container">
-                    
+                <div class="slider-for">
+                    <div class="slide1">
+                        <div class="heading-container">
+                            <h3>
+                                2018-2019
+                            </h3>
+                        </div>
+                        <div class="description-container">
+                            <p>I finished my Intermediate schooling with the CBSE Board in 2019.</p>
+                        </div>
+                    </div>
+                    <div class="slide2">
+                        <div class="heading-container">
+                            <h3>2019-2022</h3>
+                        </div>
+                        <div class="description-container">
+                            <p>I obtained my postgraduate degree from Mahatma Jyotiba Phule Rohilkhand University,
+                                Bareilly, in 2022.</p>
+                        </div>
+                    </div>
+                    <div class="slide3">
+                        <div class="heading-container">
+                            <h3>2022-Present</h3>
+                        </div>
+                        <div class="description-container">
+                            <p>I am currently pursuing my postgraduate studies at Indira Gandhi National Open
+                                University.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
 </body>
 
 </html>
